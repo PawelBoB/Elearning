@@ -4,12 +4,12 @@ using System;
 class Pair
 {
     private DateTime beginningsP;
-    private TimeSpan endingP;
-    private TimeSpan beginningsBreak;
-    private TimeSpan endingBreak;
+    private DateTime endingP;
+    private DateTime beginningsBreak;
+    private DateTime endingBreak;
     private Shift shift;
 
-    public Pair(TimeSpan beginningsP, TimeSpan endingP, TimeSpan beginningsBreak, TimeSpan endingBreak, Shift shift)
+    public Pair(DateTime beginningsP, DateTime endingP, DateTime beginningsBreak, DateTime endingBreak, Shift shift)
     {
         this.beginningsP = beginningsP;
         this.endingP = endingP;
