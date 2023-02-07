@@ -3,7 +3,7 @@ using System;
 
 class Pair
 {
-    private TimeSpan beginningsP;
+    private DateTime beginningsP;
     private TimeSpan endingP;
     private TimeSpan beginningsBreak;
     private TimeSpan endingBreak;
