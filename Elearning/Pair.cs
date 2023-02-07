@@ -1,15 +1,15 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Pair
+public class Pair       // Pair num = new Pair(new TimeSpan (12,23,04)); - ввод времени
 {
-    private DateTime beginningsP;
-    private DateTime endingP;
-    private DateTime beginningsBreak;
-    private DateTime endingBreak;
+    private TimeSpan beginningsP;
+    private TimeSpan endingP;
+    private TimeSpan beginningsBreak;
+    private TimeSpan endingBreak;
     private Shift shift;
 
-    public Pair(DateTime beginningsP, DateTime endingP, DateTime beginningsBreak, DateTime endingBreak, Shift shift)
+    public Pair(TimeSpan beginningsP, TimeSpan endingP, TimeSpan beginningsBreak, TimeSpan endingBreak, Shift shift)
     {
         this.beginningsP = beginningsP;
         this.endingP = endingP;
