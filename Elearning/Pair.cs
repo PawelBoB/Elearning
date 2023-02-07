@@ -1,7 +1,7 @@
 using Microsoft.VisualBasic;
 using System;
 
-class Pair
+public class Pair
 {
     private DateTime beginningsP;
     private DateTime endingP;
