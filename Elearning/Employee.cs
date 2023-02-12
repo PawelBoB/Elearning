@@ -5,7 +5,7 @@ public class Employee {
     private string fam;
     private string name;
     private string otch;
-    private Post post
+    private Post post;
  
     public Employee(string fam, string name, string otch, Post post)
     {
