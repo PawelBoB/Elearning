@@ -1,7 +1,7 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Pair       // Pair num = new Pair(new TimeSpan (12,23,04)); - ввод времени
+public class Pair      // Pair num = new Pair(new TimeSpan (12,23,04)); - ввод времени
 {
     private TimeSpan beginningsP;
     private TimeSpan endingP;
