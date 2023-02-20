@@ -1,12 +1,13 @@
 using Microsoft.VisualBasic;
 using System;
-class Organization
+
+public class Organization
 {
-    private string string name;
-    private string object legalAddress;
-    private string object actualAddress;
-    private director employee;
-    public Organization(string name, object legalAddress, object actualAddress, director employee)
+    private string name;
+    private object legalAddress;
+    private object actualAddress;
+    private Employee employee;
+    public Organization(string name, object legalAddress, object actualAddress, Employee employee)
     {
         this.name = name;
         this.legalAddress = legalAddress;
