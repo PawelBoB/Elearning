@@ -1,9 +1,13 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Content
+class Content
 {
-    public Content()
+    private string name;
+    private string author;
+    public Content (string name, string author)
     {
+        this.name = name;
+    	this.author = author;
     }
 }
