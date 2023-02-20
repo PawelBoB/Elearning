@@ -1,7 +1,7 @@
 using Microsoft.VisualBasic;
 using System;
 
-class Content
+public class Content
 {
     private string name;
     private string author;
