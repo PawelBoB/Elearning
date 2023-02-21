@@ -19,6 +19,10 @@ namespace Bob
                     case "Theme":
                         Console.WriteLine(CreateTheme());
                         break;
+                        
+                    case "LessonType":
+                        Console.WriteLine(CreateLessonType());
+                        break;
 
                     default:
                         Console.WriteLine("Такого класса не существует!");
