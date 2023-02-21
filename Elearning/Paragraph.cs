@@ -3,12 +3,7 @@ using System;
 
 public class Paragraph
 {
-    private string name;
-    private Theme theme;
-    
-    public Paragraph(string name, Theme theme)
+    public Paragraph()
     {
-        this.name = name;
-        this.theme = theme;
     }
 }

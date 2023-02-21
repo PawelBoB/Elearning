@@ -3,11 +3,7 @@ using System;
 
 public class Discipline
 {
-    private string name;
-    private string abbreviation;
-    public Discipline(string name, string abbreviation)
+    public Discipline()
     {
-        this.name = name;
-        this.abbreviation = abbreviation;
     }
 }

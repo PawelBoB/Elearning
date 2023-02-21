@@ -3,9 +3,7 @@ using System;
 
 public class Shift
 {
-    private string name;
-    public Shift(string name)
+    public Shift()
     {
-        this.name = name;
     }
 }

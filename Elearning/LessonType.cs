@@ -3,9 +3,7 @@ using System;
 
 public class LessonType
 {
-    private string name;
-    public LessonType(string name)
+    public LessonType()
     {
-       this.name = name; 
     }
 }

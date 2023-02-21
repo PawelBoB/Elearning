@@ -1,14 +1,9 @@
+using Microsoft.VisualBasic;
 using System;
+
 public class Equipment
 {
-    private string name;
-    private int price;
-    private DateTime registrationDate;
-
-    public Equipment(string name, int price, DateTime? registrationDate = null)
+    public Equipment()
     {
-        this.name = name;
-        this.price = price;
-        this.registrationDate = registrationDate ?? DateTime.Now;
     }
 }

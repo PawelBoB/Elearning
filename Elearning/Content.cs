@@ -3,11 +3,7 @@ using System;
 
 public class Content
 {
-    private string name;
-    private string author;
-    public Content (string name, string author)
+    public Content()
     {
-        this.name = name;
-    	this.author = author;
     }
 }
