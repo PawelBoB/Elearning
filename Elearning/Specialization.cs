@@ -3,8 +3,10 @@ using System;
 
 public class Specialization
 {
-    private string name;
-    private string abbreviation;
+    private readonly string name;
+    private readonly string abbreviation;
+    public string Name { get => name; }
+    public string Abbreviation { get => abbreviation; }
     public Specialization(string name, string abbreviation)
     {
         this.name = name;
