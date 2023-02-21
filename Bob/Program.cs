@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-﻿using System;
-
-namespace Bob
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            
-        }
-    }
-}
-=======
-﻿using System;
+using System;
 
 namespace Bob
 {
@@ -190,5 +176,3 @@ namespace Bob
 
     }
 }
->>>>>>> 68ec862 (2.0)
->>>>>>> 144be28 (2.0)
