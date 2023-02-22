@@ -63,20 +63,6 @@ namespace Bob
         {
             return new Lesson(CreateDiscipline(), CreateEmployee(), CreateGroup(), CreatePair(), CreateLessonType());
         }
-        /*
-        static Pair CreatePair()
-        {
-            Console.Write("Время начала пары: ");
-            TimeSpan a = Console.ReadLine();
-            Console.Write("время окончания пары: ");
-            TimeSpan b = Console.ReadLine();
-            Console.Write("время начала перерыва: ");
-            TimeSpan c = Console.ReadLine();
-            Console.Write("время окончания перерыва: ");
-            TimeSpan d = Console.ReadLine();
-            return new Pair(a,b,c,d,CreateShift());
-        }
-        */
         static Pair CreatePair()
         {
             return new Pair(GetTimeSpan(), GetTimeSpan(), GetTimeSpan(), GetTimeSpan(), CreateShift());
