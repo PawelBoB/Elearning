@@ -105,9 +105,7 @@ namespace Bob
         }
         static Discipline CreateDiscipline()
         {
-            Console.Write("Название дисциплины
-
-: ");
+            Console.Write("Название дисциплины: ");
             string a = Console.ReadLine();
 
             Console.Write("Сокращение: ");
