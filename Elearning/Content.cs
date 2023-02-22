@@ -8,6 +8,10 @@ namespace Elearning
     {
         private readonly string name;
         private readonly string author;
+
+        public string Name { get => name; }
+        public string Author { get => author; }
+
         public Content(string name, string author)
         {
             this.name = name;
