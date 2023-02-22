@@ -1,6 +1,6 @@
+//https://docs.google.com/document/d/1JN0SjEeelhtpKzoJqkva5JRePiMCLzyYPcI0Je8m7qU/edit?usp=sharing
 using Microsoft.VisualBasic;
 using System;
-
 public class Organization
 {
     private string name;
