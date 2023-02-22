@@ -4,23 +4,8 @@ using System;
 
 public class Specialization
 {
-    private readonly string name;
-    private readonly string abbreviation;
-    public string Name
-    {
-        get
-        {
-            return name;
-        }
-    }
-    public string Abbreviation
-    {
-        get
-        {
-            return abbreviation;
-
-        }
-    }
+    private string name;
+    private string abbreviation;
     public Specialization(string name, string abbreviation)
     {
         this.name = name;
