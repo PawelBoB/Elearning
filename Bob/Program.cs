@@ -17,6 +17,9 @@ namespace Bob
                     case "Discipline":
                         Console.WriteLine(CreateDiscipline());
                         break;
+                    case "Student":
+                        Console.WriteLine(CreateStudent());
+                        break;
                     case "Post":
                         Console.WriteLine(CreatePost());
                         break;
@@ -84,6 +87,33 @@ namespace Bob
             string a = Console.ReadLine();
             return new Shift(a);
         }
+        static Student CreateStudent()
+        {
+            Console.Write("Введите фамилию: ");
+            string a = Console.ReadLine();
+
+            Console.Write("Введите имя: ");
+            string b = Console.ReadLine();
+
+            Console.Write("Введите отчество: ");
+            string c = Console.ReadLine();
+            
+            static DateTime? GetBirthDay()
+                {
+                    Console.Write("Введите день рождения: ");
+                    int day = Int32.Parse(Console.ReadLine());
+                
+                    Console.Write("Введите месяц рождения: ");
+                    int month = Int32.Parse(Console.ReadLine());
+                
+                    Console.Write("Введите год рождения: ");
+                    int year = Int32.Parse(Console.ReadLine());
+                
+                    return new DateTime(year, month, day);
+                }
+            
+            return new Student(a,b,c, CreateGroup(), GetBirthDay())
+        }
         static Group CreateGroup()
         {
             Console.Write("Название группы: ");
@@ -111,7 +141,7 @@ namespace Bob
         }
         static Discipline CreateDiscipline()
         {
-            Console.Write("Название дисциплины: ");
+            Console.Write("Название специальтности: ");
             string a = Console.ReadLine();
 
             Console.Write("Сокращение: ");
