@@ -44,6 +44,9 @@ namespace Bob
                     case "Organization":
                         Console.WriteLine(CreateOrganization());
                         break;
+                    case "Content":
+                        Console.WriteLine(CreateContent());
+                        break;
                     default:
                         Console.WriteLine("Такого класса не существует");
                         break;
@@ -96,7 +99,7 @@ namespace Bob
         }
         static Specialization CreateSpecialization()
         {
-            Console.Write("Название специальности: ");
+            Console.Write("Название аудитории: ");
             string a = Console.ReadLine();
 
             Console.Write("Название абревиатуры: ");
@@ -105,7 +108,7 @@ namespace Bob
         }
         static Discipline CreateDiscipline()
         {
-            Console.Write("Название дисциплины: ");
+            Console.Write("Название специальтности: ");
             string a = Console.ReadLine();
 
             Console.Write("Сокращение: ");
@@ -172,6 +175,17 @@ namespace Bob
             string c = Console.ReadLine();
 
             return new Organization(a, b, c, CreateEmployee());
+        }
+        static Content CreateContent()
+        {
+            Console.Write("Введите название: ");
+            string a = Console.ReadLine();
+
+            Console.Write("Введите автора: ");
+            string b = Console.ReadLine();
+
+            return new Content(a, b, CreateContent());
+
         }
 
     }
