@@ -68,15 +68,17 @@ namespace Bob
             return new Pair(GetTimeSpan(), GetTimeSpan(), GetTimeSpan(), GetTimeSpan(), CreateShift());
         }
         
-        static TimeSpan GetTimeSpan()
+        static TimeSpan ParseTimeSpan()
         {
             Console.Write("Введите час: ");
-            Int32.TryParse(Console.ReadLine() ?? "0", out int h);
+            _ = int.TryParse(Console.ReadLine() ?? "0", out int h);
             Console.Write("Введите минуту: ");
-            Int32.TryParse(Console.ReadLine() ?? "0", out int m);
+            _ = int.TryParse(Console.ReadLine() ?? "0", out int m);
             Console.Write("Введите секунду: ");
-            Int32.TryParse(Console.ReadLine() ?? "0", out int s);
+            _ = int.TryParse(Console.ReadLine() ?? "0", out int s);
+
             return new TimeSpan(h, m, s);
+        }
         }
         static Shift CreateShift()
         {
