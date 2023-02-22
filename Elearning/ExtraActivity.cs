@@ -1,9 +1,12 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class ExtraActivity
+namespace Elearning
 {
-    public ExtraActivity()
+    public class ExtraActivity
     {
+        public ExtraActivity()
+        {
+        }
     }
 }

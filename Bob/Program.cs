@@ -1,10 +1,11 @@
+using Elearning;
 using System;
 
 namespace Bob
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             while (true)
             {
@@ -68,7 +69,7 @@ namespace Bob
             return new Pair(GetTimeSpan(), GetTimeSpan(), GetTimeSpan(), GetTimeSpan(), CreateShift());
         }
         
-        static TimeSpan ParseTimeSpan()
+        static TimeSpan GetTimeSpan()
         {
             Console.Write("Введите час: ");
             _ = int.TryParse(Console.ReadLine() ?? "0", out int h);
@@ -79,34 +80,33 @@ namespace Bob
 
             return new TimeSpan(h, m, s);
         }
-        }
         static Shift CreateShift()
         {
             Console.Write("Название смены: ");
-            string a = Console.ReadLine();
+            string a = Console.ReadLine() ?? "";
             return new Shift(a);
         }
         static Student CreateStudent()
         {
             Console.Write("Введите фамилию: ");
-            string a = Console.ReadLine();
+            string a = Console.ReadLine() ?? "";
 
             Console.Write("Введите имя: ");
-            string b = Console.ReadLine();
+            string b = Console.ReadLine() ?? "";
 
             Console.Write("Введите отчество: ");
-            string c = Console.ReadLine();
+            string c = Console.ReadLine() ?? "";
             
             static DateTime? GetBirthDay()
                     {
                         try 
                         {
                             Console.Write("Введите день рождения: ");
-                            int day = Int32.Parse(Console.ReadLine());
+                            int day = Int32.Parse(Console.ReadLine() ?? "");
                             Console.Write("Введите месяц рождения: ");
                             int month = Convert.ToInt32(Console.ReadLine());
                             Console.Write("Введите год рождения: ");
-                            int year = Int32.Parse(Console.ReadLine());
+                            int year = Int32.Parse(Console.ReadLine() ?? "");
                             return new DateTime(year, month, day);
                         }
                         catch 
@@ -117,58 +117,58 @@ namespace Bob
         static Group CreateGroup()
         {
             Console.Write("Название группы: ");
-            string a = Console.ReadLine();
+            string a = Console.ReadLine() ?? "";
 
             Console.Write("Сокращение группы: ");
-            string b = Console.ReadLine();
+            string b = Console.ReadLine() ?? "";
 
             Console.Write("Численность: ");
-            int с = Int32.Parse(Console.ReadLine());
+            int с = Int32.Parse(Console.ReadLine() ?? "");
 
             Console.Write("Код поступления: ");
-            int d = Int32.Parse(Console.ReadLine());
+            int d = Int32.Parse(Console.ReadLine() ?? "");
 
             return new Group(a, b, с, d, CreateSpecialization(), CreateEmployee());
         }
         static Specialization CreateSpecialization()
         {
             Console.Write("Название аудитории: ");
-            string a = Console.ReadLine();
+            string a = Console.ReadLine() ?? "";
 
             Console.Write("Название абревиатуры: ");
-            string b = Console.ReadLine();
+            string b = Console.ReadLine() ?? "";
             return new Specialization(a, b);
         }
         static Discipline CreateDiscipline()
         {
             Console.Write("Название специальтности: ");
-            string a = Console.ReadLine();
+            string a = Console.ReadLine() ?? "";
 
             Console.Write("Сокращение: ");
-            string b = Console.ReadLine();
+            string b = Console.ReadLine() ?? "";
 
             return new Discipline(a, b);
         }
         static Employee CreateEmployee()
         {
             Console.Write("Введите фамилию: ");
-            string a = Console.ReadLine();
+            string a = Console.ReadLine() ?? "";
 
             Console.Write("Введите имя: ");
-            string b = Console.ReadLine();
+            string b = Console.ReadLine() ?? "";
 
             Console.Write("Введите отчество: ");
-            string с = Console.ReadLine();
+            string с = Console.ReadLine() ?? "";
             return new Employee(a, b, с, CreatePost());
         }
 
         static Post CreatePost()
         {
             Console.Write("Введите название должности: ");
-            string a = Console.ReadLine();
+            string a = Console.ReadLine() ?? "";
 
             Console.Write("Введите оклад: ");
-            int b = Int32.Parse(Console.ReadLine());
+            int b = Int32.Parse(Console.ReadLine() ?? "");
 
             return new Post(a, b, CreateDivision());
 
@@ -181,43 +181,43 @@ namespace Bob
         static Theme CreateTheme()
         {
             Console.Write("Название темы: ");
-            string a = Console.ReadLine();
+            string a = Console.ReadLine() ?? "";
 
             return new Theme(a);
         }
         static LessonType CreateLessonType()
         {
             Console.Write("Введите вид занятия: ");
-            string a = Console.ReadLine();
+            string a = Console.ReadLine() ?? "";
             return new LessonType(a);
         }
         static Division CreateDivision()
         {
             Console.Write("Название подразделения: ");
-            string a = Console.ReadLine();
+            string a = Console.ReadLine() ?? "";
 
             return new Division(a, CreateEmployee(), CreateOrganization());
         }
         static Organization CreateOrganization()
         {
             Console.Write("Название организации: ");
-            string a = Console.ReadLine();
+            string a = Console.ReadLine() ?? "";
             Console.Write("Юридический адрес: ");
-            string b = Console.ReadLine();
+            string b = Console.ReadLine() ?? "";
             Console.Write("Фактический адрес: ");
-            string c = Console.ReadLine();
+            string c = Console.ReadLine() ?? "";
 
             return new Organization(a, b, c, CreateEmployee());
         }
         static Content CreateContent()
         {
             Console.Write("Введите название: ");
-            string a = Console.ReadLine();
+            string a = Console.ReadLine() ?? "";
 
             Console.Write("Введите автора: ");
-            string b = Console.ReadLine();
+            string b = Console.ReadLine() ?? "";
 
-            return new Content(a, b, CreateContent());
+            return new Content(a, b);
 
         }
 

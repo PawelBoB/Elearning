@@ -1,9 +1,12 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class KTPHeader
+namespace Elearning
 {
-    public KTPHeader()
+    public class KTPHeader
     {
+        public KTPHeader()
+        {
+        }
     }
 }
