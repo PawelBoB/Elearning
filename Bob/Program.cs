@@ -185,6 +185,12 @@ namespace Bob
 
             return new Theme(a);
         }
+        static Paragraph CreateParagraph()
+        {
+            Console.Write("Название параграфа: ");
+            string name = Console.ReadLine() ?? "Нет названия";
+            return new Paragraph(name, CreateTheme());
+        }
         static LessonType CreateLessonType()
         {
             Console.Write("Введите вид занятия: ");
