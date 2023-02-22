@@ -47,6 +47,9 @@ namespace Bob
                     case "Content":
                         Console.WriteLine(CreateContent());
                         break;
+                    case "Shift":
+                        Console.WriteLine(CreateShift());
+                        break;
                     default:
                         Console.WriteLine("Такого класса не существует");
                         break;
@@ -190,3 +193,7 @@ namespace Bob
 
     }
 }
+
+
+
+
