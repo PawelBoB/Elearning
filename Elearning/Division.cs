@@ -3,10 +3,6 @@ using System;
 
 public class Division
 {
-<<<<<<< HEAD
-    public Division()
-    {
-=======
     private string name;
     private Employee employee;
     private Organization organization;
@@ -15,6 +11,5 @@ public class Division
         this.name = name;   
         this.employee = employee;
         this.organization = organization;
->>>>>>> 144be28 (2.0)
     }
 }
