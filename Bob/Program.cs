@@ -96,7 +96,7 @@ namespace Bob
         }
         static Specialization CreateSpecialization()
         {
-            Console.Write("Название аудитории: ");
+            Console.Write("Название специальности: ");
             string a = Console.ReadLine();
 
             Console.Write("Название абревиатуры: ");
@@ -105,7 +105,8 @@ namespace Bob
         }
         static Discipline CreateDiscipline()
         {
-            Console.Write("Название специальтности: ");
+            Console.Write("Название дисциплины
+: ");
             string a = Console.ReadLine();
 
             Console.Write("Сокращение: ");
