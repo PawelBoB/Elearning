@@ -104,7 +104,7 @@ namespace Bob
                             Console.Write("Введите день рождения: ");
                             int day = Int32.Parse(Console.ReadLine() ?? "");
                             Console.Write("Введите месяц рождения: ");
-                            int month = Convert.ToInt32(Console.ReadLine());
+                            int month = Int32.Parse(Console.ReadLine() ?? "");
                             Console.Write("Введите год рождения: ");
                             int year = Int32.Parse(Console.ReadLine() ?? "");
                             return new DateTime(year, month, day);
