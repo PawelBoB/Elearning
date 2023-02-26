@@ -1,14 +1,17 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Paragraph
+namespace Elearning
 {
-    private string name;
-    private Theme theme;
-    
-    public Paragraph(string name, Theme theme)
+    public class Paragraph
     {
-        this.name = name;
-        this.theme = theme;
+        private readonly string name;
+        private readonly Theme theme;
+
+        public Paragraph(string name, Theme theme)
+        {
+            this.name = name;
+            this.theme = theme;
+        }
     }
 }

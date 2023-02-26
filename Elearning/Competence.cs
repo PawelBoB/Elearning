@@ -1,9 +1,12 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Competence
+namespace Elearning
 {
-    public Competence()
+    public class Competence
     {
+        public Competence()
+        {
+        }
     }
 }

@@ -1,17 +1,21 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Employee {
-    private string fam;
-    private string name;
-    private string otch;
-    private Post post;
- 
-    public Employee(string fam, string name, string otch, Post post)
+namespace Elearning
+{
+    public class Employee
     {
-        this.fam = fam;
-        this.name = name;
-        this.otch = otch;
-        this.post = post;
+        private readonly string fam;
+        private readonly string name;
+        private readonly string otch;
+        private readonly Post post;
+
+        public Employee(string fam, string name, string otch, Post post)
+        {
+            this.fam = fam;
+            this.name = name;
+            this.otch = otch;
+            this.post = post;
+        }
     }
 }

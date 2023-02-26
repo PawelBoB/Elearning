@@ -1,17 +1,20 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Building
+namespace Elearning
 {
-    private string name;
-    private string address;
-    private Employee employee;
-    private Organization organization;
-    public Building(string name, string address, Employee employee, Organization organization)
+    public class Building
     {
-        this.name = name;
-        this.address = address;
-        this.employee = employee;
-        this.organization =organization;
+        private readonly string name;
+        private readonly string address;
+        private readonly Employee employee;
+        private readonly Organization organization;
+        public Building(string name, string address, Employee employee, Organization organization)
+        {
+            this.name = name;
+            this.address = address;
+            this.employee = employee;
+            this.organization = organization;
+        }
     }
 }

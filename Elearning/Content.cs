@@ -2,13 +2,20 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Content
+namespace Elearning
 {
-    private string name;
-    private string author;
-    public Content (string name, string author)
+    public class Content
     {
-        this.name = name;
-    	this.author = author;
+        private readonly string name;
+        private readonly string author;
+
+        public string Name { get => name; }
+        public string Author { get => author; }
+
+        public Content(string name, string author)
+        {
+            this.name = name;
+            this.author = author;
+        }
     }
 }

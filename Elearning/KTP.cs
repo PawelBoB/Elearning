@@ -1,9 +1,12 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class KTP
+namespace Elearning
 {
-    public KTP()
+    public class KTP
     {
+        public KTP()
+        {
+        }
     }
 }
