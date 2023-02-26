@@ -1,9 +1,9 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class KTP
+namespace Elearning
 {
-    public KTP()
+    public class KTP
     {
         private Paragraph paragraph;
         private LessonType lessontype;
@@ -11,7 +11,7 @@ public class KTP
         private int nomer;
         private int chas;
 
-        public Student(Paragraph paragraph, LessonType lessontype, List<Content> content, int nomer, int chas)
+        public KTP(Paragraph paragraph, LessonType lessontype, List<Content> content, int nomer, int chas)
         {
             this.paragraph = paragraph;
             this.lessontype = lessontype;

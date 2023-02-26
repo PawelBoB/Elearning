@@ -1,11 +1,14 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Theme
+namespace Elearning
 {
-    private string name;
-    public Theme(string name)
+    public class Theme
     {
-        this.name = name;
+        private readonly string name;
+        public Theme(string name)
+        {
+            this.name = name;
+        }
     }
 }

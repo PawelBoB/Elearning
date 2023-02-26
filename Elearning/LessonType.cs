@@ -2,11 +2,14 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class LessonType
+namespace Elearning
 {
-    private string name;
-    public LessonType(string name)
+    public class LessonType
     {
-       this.name = name; 
+        private readonly string name;
+        public LessonType(string name)
+        {
+            this.name = name;
+        }
     }
 }

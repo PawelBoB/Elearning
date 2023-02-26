@@ -1,14 +1,18 @@
 using System;
-public class Equipment
-{
-    private string name;
-    private int price;
-    private DateTime registrationDate;
 
-    public Equipment(string name, int price, DateTime? registrationDate = null)
+namespace Elearning
+{
+    public class Equipment
     {
-        this.name = name;
-        this.price = price;
-        this.registrationDate = registrationDate ?? DateTime.Now;
+        private readonly string name;
+        private readonly int price;
+        private readonly DateTime registrationDate;
+
+        public Equipment(string name, int price, DateTime? registrationDate = null)
+        {
+            this.name = name;
+            this.price = price;
+            this.registrationDate = registrationDate ?? DateTime.Now;
+        }
     }
 }

@@ -1,17 +1,20 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Organization
+namespace Elearning
 {
-    private string name;
-    private object legalAddress;
-    private object actualAddress;
-    private Employee employee;
-    public Organization(string name, object legalAddress, object actualAddress, Employee employee)
+    public class Organization
     {
-        this.name = name;
-        this.legalAddress = legalAddress;
-        this.actualAddress = actualAddress;
-        this.employee = employee;
+        private readonly string name;
+        private readonly object legalAddress;
+        private readonly object actualAddress;
+        private readonly Employee employee;
+        public Organization(string name, object legalAddress, object actualAddress, Employee employee)
+        {
+            this.name = name;
+            this.legalAddress = legalAddress;
+            this.actualAddress = actualAddress;
+            this.employee = employee;
+        }
     }
 }
