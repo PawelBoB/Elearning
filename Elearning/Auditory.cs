@@ -1,9 +1,12 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Auditory
+namespace Elearning
 {
-    public Auditory()
+    public class Auditory
     {
+        public Auditory()
+        {
+        }
     }
 }

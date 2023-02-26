@@ -2,11 +2,14 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Shift
+namespace Elearning
 {
-    private string name;
-    public Shift(string name)
+    public class Shift
     {
-        this.name = name;
+        private readonly string name;
+        public Shift(string name)
+        {
+            this.name = name;
+        }
     }
 }

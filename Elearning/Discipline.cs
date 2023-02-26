@@ -2,13 +2,16 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Discipline
+namespace Elearning
 {
-    private string name;
-    private string abbreviation;
-    public Discipline(string name, string abbreviation)
+    public class Discipline
     {
-        this.name = name;
-        this.abbreviation = abbreviation;
+        private readonly string name;
+        private readonly string abbreviation;
+        public Discipline(string name, string abbreviation)
+        {
+            this.name = name;
+            this.abbreviation = abbreviation;
+        }
     }
 }

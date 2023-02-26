@@ -1,15 +1,18 @@
 using Microsoft.VisualBasic;
 using System;
 
-public class Division
+namespace Elearning
 {
-    private string name;
-    private Employee employee;
-    private Organization organization;
-    public Division(string name, Employee employee, Organization organization)
+    public class Division
     {
-        this.name = name;   
-        this.employee = employee;
-        this.organization = organization;
+        private readonly string name;
+        private readonly Employee employee;
+        private readonly Organization organization;
+        public Division(string name, Employee employee, Organization organization)
+        {
+            this.name = name;
+            this.employee = employee;
+            this.organization = organization;
+        }
     }
 }
