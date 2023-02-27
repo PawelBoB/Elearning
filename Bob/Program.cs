@@ -1,5 +1,6 @@
 using Elearning;
 using System;
+using System.Runtime;
 
 namespace Bob
 {
@@ -56,6 +57,9 @@ namespace Bob
                         break;
                     case "Paragraph":
                         Console.WriteLine(CreateParagraph());
+                        break;
+                    case "Equipment":
+                        Console.WriteLine(CreateEquipment());
                         break;
                     default:
                         Console.WriteLine("Такого класса не существует");
@@ -228,6 +232,29 @@ namespace Bob
 
             return new Content(a, b);
 
+        }
+
+        static Equipment CreateEquipment()
+        {
+            Console.Write("Введите имя: ");
+            string name = Console.ReadLine() ?? "";
+
+            Console.Write("Введите сумму: ");
+            _ = int.TryParse(Console.ReadLine(), out int price);
+            
+            return new Equipment(name, price, CreateDateTime());
+        }
+
+        static DateTime CreateDateTime()
+        {
+            Console.Write("Введите год: ");
+            _  = int.TryParse(Console.ReadLine(), out int year);
+            Console.Write("Введите месяц: ");
+            _ = int.TryParse(Console.ReadLine(), out int month);
+            Console.Write("Введите день: ");
+            _ = int.TryParse(Console.ReadLine(), out int day);
+
+            return new DateTime(year, month, day);
         }
 
     }

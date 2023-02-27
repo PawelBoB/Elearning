@@ -8,6 +8,10 @@ namespace Elearning
         private readonly int price;
         private readonly DateTime registrationDate;
 
+        public string Name { get { return name; } }
+        public int Price { get { return price; } }
+        DateTime RegistrationDate { get { return registrationDate; } }
+
         public Equipment(string name, int price, DateTime? registrationDate = null)
         {
             this.name = name;
