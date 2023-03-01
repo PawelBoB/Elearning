@@ -28,6 +28,9 @@ namespace Bob
                     case "Employee":
                         Console.WriteLine(CreateEmployee());
                         break;
+                    case "ExtraActivity":
+                        Console.WriteLine(CreateExtraActivity());
+                        break;
                     case "Group":
                         Console.WriteLine(CreateGroup());
                         break;
@@ -167,6 +170,13 @@ namespace Bob
             Console.Write("Введите отчество: ");
             string с = Console.ReadLine() ?? "";
             return new Employee(a, b, с, CreatePost());
+        }
+        static ExtraActivity CreateExtraActivity()
+        {
+            Console.Write("Введите название внеурочной деятельности: ");
+            string a = Console.ReadLine() ?? "Нет названия"
+            
+            return new ExtraActivity(a,CreateEmployee()); 
         }
 
         static Post CreatePost()
