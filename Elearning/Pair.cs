@@ -1,6 +1,8 @@
 //https://docs.google.com/document/d/1r4OjKXg5_5yj6ibHB778UEF5Z1nbUqGdXjpQXbTGWiQ/edit?usp=sharing
 using Microsoft.VisualBasic;
 using System;
+using System.Runtime.Intrinsics.X86;
+using System.Xml.Linq;
 
 namespace Elearning
 {
@@ -12,6 +14,11 @@ namespace Elearning
         private readonly TimeSpan endingBreak;
         private readonly Shift shift;
 
+        public TimeSpan BeginningsP { get => beginningsP; }
+        public TimeSpan EndingP { get => endingP; }
+        public TimeSpan BeginningsBreak { get => beginningsBreak; }
+        public TimeSpan EndingBreak { get => endingBreak; }
+        public Shift Shift_ { get =>  shift; }
         public Pair(TimeSpan beginningsP, TimeSpan endingP, TimeSpan beginningsBreak, TimeSpan endingBreak, Shift shift)
         {
             this.beginningsP = beginningsP;
