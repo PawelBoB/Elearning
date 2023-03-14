@@ -21,7 +21,7 @@ namespace Elearning
             endingP = new TimeSpan(00, 00, 00);
             beginningsBreak = new TimeSpan(00, 00, 00);
             endingBreak = new TimeSpan(00, 00, 00);
-            shift = (Shift_ ?? "нет данных");
+            shift = new ("нет данных");
         }
         
         public TimeSpan BeginningsP { get => beginningsP; }
