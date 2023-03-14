@@ -14,5 +14,10 @@ namespace Elearning
         {
             this.name = name;
         }
+
+        public static implicit operator Shift(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

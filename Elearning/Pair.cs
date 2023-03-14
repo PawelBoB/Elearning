@@ -4,6 +4,7 @@ using System;
 using System.Runtime.Intrinsics.X86;
 using System.Xml.Linq;
 
+
 namespace Elearning
 {
     public class Pair       // Pair num = new Pair(new TimeSpan (12,23,04)); - ввод времени
@@ -12,8 +13,17 @@ namespace Elearning
         private readonly TimeSpan endingP;
         private readonly TimeSpan beginningsBreak;
         private readonly TimeSpan endingBreak;
-        private readonly Shift shift;
+        private readonly  Shift shift;
 
+        public Pair()
+        {
+            beginningsP = new TimeSpan(00, 00, 00);
+            endingP = new TimeSpan(00, 00, 00);
+            beginningsBreak = new TimeSpan(00, 00, 00);
+            endingBreak = new TimeSpan(00, 00, 00);
+            shift = (Shift_ ?? "нет данных");
+        }
+        
         public TimeSpan BeginningsP { get => beginningsP; }
         public TimeSpan EndingP { get => endingP; }
         public TimeSpan BeginningsBreak { get => beginningsBreak; }
@@ -27,5 +37,6 @@ namespace Elearning
             this.endingBreak = endingBreak;
             this.shift = shift;
         }
+        
     }
 }
