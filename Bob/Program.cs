@@ -64,6 +64,9 @@ namespace Bob
                     case "Equipment":
                         Console.WriteLine(CreateEquipment());
                         break;
+                    case "Auditory":
+                        Console.WriteLine(CreateAuditory());
+                        break;
                     default:
                         Console.WriteLine("Такого класса не существует");
                         break;
@@ -257,6 +260,25 @@ namespace Bob
             _ = int.TryParse(Console.ReadLine(), out int price);
             
             return new Equipment(name, price, CreateDateTime());
+        }
+        
+        static Auditory CreateAuditory()
+        {
+            Console.Write("Номер аудитории:");
+            string a = Console.ReadLine() ?? "";
+            
+            Console.Write("Количество посадочных мест:");
+            int b = Int32.Parse(Console.ReadLine() ?? "");
+
+            Console.Write("Количество окон:");
+            int h = Int32.Parse(Console.ReadLine() ?? "");
+
+            List<Equipment> list = new();
+                        for (int i = 0; i < 3; i++)
+                        {
+                            list.Add(CreateEquipment());
+                        }
+            return new Auditory(a,CreateEmployee(), b, h, list);
         }
 
         static DateTime CreateDateTime()
