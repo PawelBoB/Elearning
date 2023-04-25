@@ -40,5 +40,29 @@ namespace Bob
             throw new NotImplementedException();
         }
 
+        public static void Print(Lesson lesson)
+        {
+            Console.WriteLine(lesson.Date);
+            Print(lesson.Discipline);
+            Print(lesson.Employee);
+            Print(lesson.Group);
+            Print(lesson.Pair);
+            Print(lesson.LessonType);
+        }
+
+        private static void Print(Pair pair)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void Print(Employee employee)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void Print(Discipline discipline)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

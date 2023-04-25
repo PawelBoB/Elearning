@@ -11,7 +11,10 @@ namespace Bob
     {
         public static Lesson Lesson()
         {
-            return new Lesson(Discipline(), Employee(), Group(), Pair(), LessonType());
+            DateOnly dateOnly;
+            while (!DateOnly.TryParse(Console.ReadLine(), out dateOnly))
+                Console.WriteLine("Введите дату в формате дд.мм.гггг");
+            return new Lesson(dateOnly, Discipline(), Employee(), Group(), Pair(), LessonType());
         }
         public static Pair Pair()
         {
