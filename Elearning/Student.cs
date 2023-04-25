@@ -6,25 +6,19 @@ namespace Elearning
 {
     public class Student
     {
-        private readonly string fam;
-        private readonly string name;
-        private readonly string otch;
-        private readonly Group group;
-        private readonly DateTime? birthday;
+        public string LastName { get; }
+        public string Name { get; }
+        public string MiddleName { get; }
+        public Group Group { get; }
+        public DateOnly Birthday { get; }
 
-        public string Fam { get => fam; }
-        public string Name { get => name; }
-        public string Otch { get => otch; }
-        public Group GroupI { get => group; }
-        public DateOnly BirthDay { get => DateOnly.FromDateTime(Convert.ToDateTime(birthday)); }
-
-        public Student(string fam, string name, string otch, Group group, DateTime? birthday = null)
+        public Student(string lastName, string name, string middleName, Group group, DateOnly birthday)
         {
-            this.fam = fam;
-            this.name = name;
-            this.otch = otch;
-            this.group = group;
-            this.birthday = birthday == null ? DateTime.Now : birthday;
+            LastName = lastName;
+            Name = name;
+            MiddleName = middleName;
+            Group = group;
+            Birthday = birthday;
         }
     }
 }
