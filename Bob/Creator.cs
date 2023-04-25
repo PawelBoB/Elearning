@@ -124,8 +124,10 @@ namespace Bob
         }
         public static Theme_LessonType Theme_LessonType()
         {
-            Console.Write("Введите количество часов: ");
-            return !UInt32.TryParse(Console.ReadLine(), out UInt32 hours) ? Theme_LessonType() : new Theme_LessonType(Theme(), LessonType(), hours);
+            UInt16 hours;
+            while (!UInt16.TryParse(Console.ReadLine(), out hours))
+                Console.WriteLine("Введите количество часов: ");
+            return new Theme_LessonType(Theme(), LessonType(), hours);
         }
         public static Theme Theme()
         {

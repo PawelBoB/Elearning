@@ -35,7 +35,7 @@ namespace Bob
                         Creator.Group();
                         break;
                     case "Theme_LessonType":
-                        Creator.Theme_LessonType();
+                        UI.Print(Creator.Theme_LessonType());
                         break;
                     case "Theme":
                         Creator.Theme();
