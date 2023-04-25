@@ -174,11 +174,15 @@ namespace Bob
         static ExtraActivity CreateExtraActivity()
         {
             Console.Write("Введите название внеурочной деятельности: ");
-            string a = Console.ReadLine() ?? "Нет названия"
+            string a = Console.ReadLine() ?? "Нет названия";
+            List<Student> students = new();
+            for (int i=0; i<3; i++)
+            {
+                students.Add(CreateStudent());
+            }
             
-            return new ExtraActivity(a,CreateEmployee()); 
+            return new ExtraActivity(a,CreateEmployee(),students); 
         }
-
         static Post CreatePost()
         {
             Console.Write("Введите название должности: ");
