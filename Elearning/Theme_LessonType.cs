@@ -7,20 +7,16 @@ namespace Elearning
 {
     public class Theme_LessonType
     {
-        private readonly Theme theme;
-        private readonly LessonType lessonType;
-        private readonly uint hours;
-
-        public Theme Theme { get => theme; }
-        public LessonType LessonType { get => lessonType; }
-        public uint Hours { get => hours; }
+        public Theme Theme { get; }
+        public LessonType LessonType { get; }
+        public UInt16 Hours { get; }
 
 
-        public Theme_LessonType(Theme theme, LessonType lessonType, uint hours)
+        public Theme_LessonType(Theme theme, LessonType lessonType, UInt16 hours)
         {
-            this.theme = theme;
-            this.lessonType = lessonType;
-            this.hours = hours;
+            Theme = theme;
+            LessonType = lessonType;
+            Hours = hours;
         }
     }
 }
