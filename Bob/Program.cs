@@ -64,6 +64,9 @@ namespace Bob
                     case "Equipment":
                         Creator.Equipment();
                         break;
+                     case "Auditory":
+                        Creator.Auditory();
+                        break;
                     default:
                         Console.WriteLine("Такого класса не существует");
                         break;
