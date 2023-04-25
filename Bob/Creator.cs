@@ -198,5 +198,22 @@ namespace Bob
 
             return new DateTime(year, month, day);
         }
+        
+        public static Auditory Auditory()
+        {
+            Console.Write("Введите номер аудитории: ");
+            string a = Console.ReadLine() ?? "";
+            Console.Write("Введите количество посадочных мест: ");
+            _ = int.TryParse(Console.ReadLine(), out int seat);
+            Console.Write("Введите количество окон: ");
+            _ = int.TryParse(Console.ReadLine(), out int windows);
+            List<Equipment> list = new();
+            for (int i = 0; i < 3; i++)
+            {
+                list.Add(Equipment());
+            }
+
+            return new Auditory(a, Employee(), seat, windows, list);
+        }
     }
 }
