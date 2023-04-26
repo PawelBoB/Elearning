@@ -14,7 +14,7 @@ namespace Bob
                 switch (Console.ReadLine())
                 {
                     case "Lesson":
-                        Creator.Lesson();
+                        UI.Print(Creator.Lesson());
                         break;
                     case "Discipline":
                         Creator.Discipline();
@@ -23,7 +23,7 @@ namespace Bob
                         UI.Print(Creator.Student());
                         break;
                     case "Post":
-                        Creator.Post();
+                        UI.Print(Creator.Post());
                         break;
                     case "Employee":
                         Creator.Employee();
@@ -32,7 +32,7 @@ namespace Bob
                         Creator.ExtraActivity();
                         break;
                     case "Group":
-                        Creator.Group();
+                        UI.Print(Creator.Group());
                         break;
                     case "Theme_LessonType":
                         UI.Print(Creator.Theme_LessonType());
