@@ -9,18 +9,26 @@ namespace Bob
 {
     internal class UI
     {
+        public static void Print(Post post)
+        {
+            Console.WriteLine(post.Name);
+            Console.WriteLine(post.Salary);
+            Print(post.Division);
+        }
+
+        private static void Print(Division division)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void Print(Student student)
+
         {
             Console.WriteLine(student.MiddleName);
             Console.WriteLine(student.LastName);
             Console.WriteLine(student.Name);
             Console.WriteLine(student.Birthday);
             Print(student.Group);
-        }
-
-        private static void Print(Group group)
-        {
-            throw new NotImplementedException();
         }
 
         public static void Print(Theme_LessonType themeLessonType)
@@ -31,6 +39,21 @@ namespace Bob
         }
 
         private static void Print(Theme theme)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void Print(Group group)
+        {
+            Console.WriteLine(group.Name);
+            Console.WriteLine(group.Number);
+            Console.WriteLine(group.ShortName);
+            Console.WriteLine(group.YearAdmission);
+            Print(group.Employee);
+            Print(group.Specialization);
+        }
+
+        private static void Print(Specialization specialization)
         {
             throw new NotImplementedException();
         }
