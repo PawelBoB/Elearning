@@ -64,5 +64,12 @@ namespace Bob
         {
             throw new NotImplementedException();
         }
+
+        public static void Print(Equipment equipment)
+        {
+            Console.WriteLine(equipment.Name);
+            Console.WriteLine(equipment.Price);
+            Console.WriteLine(equipment.RegistrationDate);
+        }
     }
 }
