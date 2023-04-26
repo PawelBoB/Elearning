@@ -82,6 +82,28 @@ namespace Bob
         {
             throw new NotImplementedException();
         }
+        
+        public static void Print(Auditory auditory)
+        {
+            Console.WriteLine(auditory.Name);
+            Console.WriteLine(auditory.Seat);
+            Console.WriteLine(auditory.Windows);
+            foreach (var equipment in auditory.List)
+            {
+                Print(equipment);
+            }
+            Print(auditory.Employee);
+        }
+
+        private static void Print(Equipment equipment)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void Print(Employee employee)
+        {
+            throw new NotImplementedException();
+        }
 
         private static void Print(Discipline discipline)
         {
