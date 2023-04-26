@@ -71,5 +71,14 @@ namespace Bob
             Console.WriteLine(equipment.Price);
             Console.WriteLine(equipment.RegistrationDate);
         }
+        public static void Print(ExtraActivity extraActivity)
+        {
+            Console.WriteLine(extraActivity.Name);
+            foreach (var student in extraActivity.Students)
+            {
+                Print(student);
+            }
+            Print(extraActivity.Director);
+        }
     }
 }
