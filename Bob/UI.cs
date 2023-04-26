@@ -86,6 +86,19 @@ namespace Bob
         private static void Print(Discipline discipline)
         {
             throw new NotImplementedException();
+<<<<<<< HEAD
         }
     }
 }
+=======
+        }
+
+        public static void Print(Equipment equipment)
+        {
+            Console.WriteLine(equipment.Name);
+            Console.WriteLine(equipment.Price);
+            Console.WriteLine(equipment.RegistrationDate);
+        }
+    }
+}
+>>>>>>> a621e3961b03eb72ce31d748acae73638ef82554

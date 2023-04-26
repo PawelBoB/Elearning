@@ -189,7 +189,11 @@ namespace Bob
             Console.Write("Введите сумму: ");
             _ = int.TryParse(Console.ReadLine(), out int price);
 
-            return new Equipment(name, price, DateTime());
+            DateOnly dateOnly;
+            while (!DateOnly.TryParse(Console.ReadLine(), out dateOnly))
+                Console.WriteLine("Введите дату в формате дд.мм.гггг");
+
+            return new Equipment(name, price, dateOnly);
         }
 
         public static DateTime DateTime()
