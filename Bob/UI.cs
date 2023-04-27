@@ -92,15 +92,10 @@ namespace Bob
             {
                 Print(equipment);
             }
-            Print(auditory.Employee);
+            
         }
 
         private static void Print(Equipment equipment)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void Print(Employee employee)
         {
             throw new NotImplementedException();
         }
