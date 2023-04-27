@@ -41,7 +41,7 @@ namespace Bob
         public static void Print(Group group)
         {
             Console.WriteLine(group.Name);
-            Console.WriteLine(group.Number);
+            Console.WriteLine(group.Size);
             Console.WriteLine(group.ShortName);
             Console.WriteLine(group.YearAdmission);
             Print(group.Employee);

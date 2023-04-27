@@ -8,16 +8,16 @@ namespace Elearning
     {
         public string Name { get; }
         public string ShortName { get; }
-        public int Number { get; }
-        public int YearAdmission { get;  }
+        public UInt16 Size { get; }
+        public UInt16 YearAdmission { get;  }
         public Specialization Specialization { get; }
         public Employee Employee { get; } 
 
-        public Group(string name, string shortName, int number, int yearAdmission, Specialization special, Employee employee)
+        public Group(string name, string shortName, UInt16 size, UInt16 yearAdmission, Specialization special, Employee employee)
         {
             Name = name;
             ShortName = shortName;
-            Number = number;
+            Size = size;
             YearAdmission = yearAdmission;
             Specialization = special;
             Employee = employee;
