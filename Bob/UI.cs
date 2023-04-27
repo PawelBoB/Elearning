@@ -50,11 +50,6 @@ namespace Bob
             Print(lesson.LessonType);
         }
 
-        private static void Print(Pair pair)
-        {
-            throw new NotImplementedException();
-        }
-
         private static void Print(Employee employee)
         {
             throw new NotImplementedException();
@@ -70,6 +65,20 @@ namespace Bob
             Console.WriteLine(equipment.Name);
             Console.WriteLine(equipment.Price);
             Console.WriteLine(equipment.RegistrationDate);
+        }
+
+        public static void Print(Pair pair)
+        {
+            Console.WriteLine(pair.BeginningsP);
+            Console.WriteLine(pair.BeginningsBreak);
+            Console.WriteLine(pair.EndingP);
+            Console.WriteLine(pair.EndingBreak);
+            Print(pair.Shift);
+        }
+
+        private static void Print(Shift shift)
+        {
+            throw new NotImplementedException();
         }
     }
 }
