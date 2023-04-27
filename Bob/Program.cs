@@ -1,6 +1,4 @@
 using Elearning;
-using System;
-using System.Runtime;
 
 namespace Bob
 {
@@ -63,6 +61,9 @@ namespace Bob
                         break;
                     case "Equipment":
                         Creator.Equipment();
+                        break;
+                    case "Building":
+                        UI.Print(Creator.Building());
                         break;
                     default:
                         Console.WriteLine("Такого класса не существует");
