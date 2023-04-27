@@ -6,18 +6,11 @@ namespace Elearning
 {
     public class Shift
     {
-        private readonly string name;
-
-        public string Name { get => name; }
+        public string Name { get; }
 
         public Shift(string name)
         {
-            this.name = name;
-        }
-
-        public static implicit operator Shift(string v)
-        {
-            throw new NotImplementedException();
+            Name = name;
         }
     }
 }
