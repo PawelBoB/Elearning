@@ -1,9 +1,4 @@
 ﻿using Elearning;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bob
 {
@@ -16,7 +11,7 @@ namespace Bob
             Print(post.Division);
         }
 
-        private static void Print(Division division)
+        public static void Print(Division division)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +33,7 @@ namespace Bob
             Console.WriteLine(themeLessonType.Hours);
         }
 
-        private static void Print(Theme theme)
+        public static void Print(Theme theme)
         {
             throw new NotImplementedException();
         }
@@ -53,7 +48,7 @@ namespace Bob
             Print(group.Specialization);
         }
 
-        private static void Print(Specialization specialization)
+        public static void Print(Specialization specialization)
         {
             throw new NotImplementedException();
         }
@@ -73,32 +68,33 @@ namespace Bob
             Print(lesson.LessonType);
         }
 
-        private static void Print(Pair pair)
+        public static void Print(Pair pair)
         {
             throw new NotImplementedException();
         }
 
-        private static void Print(Employee employee)
+        public static void Print(Employee employee)
         {
             throw new NotImplementedException();
         }
 
-        private static void Print(Discipline discipline)
+        public static void Print(Discipline discipline)
         {
             throw new NotImplementedException();
-<<<<<<< HEAD
         }
+        public static void Print(Building building)
+        {
+            Console.WriteLine(building.Name);
+            Console.WriteLine(building.Address);
+            Print(building.Employee);
+            Print(building.Organization);
+        }
+
+        public static void Print(Organization organization)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
-=======
-        }
 
-        public static void Print(Equipment equipment)
-        {
-            Console.WriteLine(equipment.Name);
-            Console.WriteLine(equipment.Price);
-            Console.WriteLine(equipment.RegistrationDate);
-        }
-    }
-}
->>>>>>> a621e3961b03eb72ce31d748acae73638ef82554

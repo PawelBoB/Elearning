@@ -1,9 +1,4 @@
 ﻿using Elearning;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bob
 {
@@ -70,6 +65,15 @@ namespace Bob
             int d = Int32.Parse(Console.ReadLine() ?? "0");
 
             return new Group(a, b, с, d, Specialization(), Employee());
+        }
+        public static Building Building()
+        {
+            Console.Write("Введите имя: ");
+            string a = Console.ReadLine() ?? "";
+
+            Console.Write("Введите адрес: ");
+            string b = Console.ReadLine() ?? "";
+            return new Building(a, b, Employee(), Organization());
         }
         public static Specialization Specialization()
         {
