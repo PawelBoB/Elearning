@@ -69,11 +69,11 @@ namespace Bob
         public static Building Building()
         {
             Console.Write("Введите имя: ");
-            string a = Console.ReadLine() ?? "";
+            string name = Console.ReadLine() ?? "";
 
             Console.Write("Введите адрес: ");
-            string b = Console.ReadLine() ?? "";
-            return new Building(a, b, Employee(), Organization());
+            string address = Console.ReadLine() ?? "";
+            return new Building(name, address, Employee(), Organization());
         }
         public static Specialization Specialization()
         {
