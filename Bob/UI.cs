@@ -53,9 +53,9 @@ namespace Bob
             throw new NotImplementedException();
         }
 
-        public static void Print(LessonType group)
+        public static void Print(LessonType lessonType)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(lessonType.Name);
         }
 
         public static void Print(Lesson lesson)

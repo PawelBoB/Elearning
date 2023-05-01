@@ -39,7 +39,7 @@ namespace Bob
                         Creator.Theme();
                         break;
                     case "LessonType":
-                        Creator.LessonType();
+                        UI.Print(Creator.LessonType());
                         break;
                     case "Pair":
                         Creator.Pair();

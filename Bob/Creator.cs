@@ -152,8 +152,8 @@ namespace Bob
         public static LessonType LessonType()
         {
             Console.Write("Введите вид занятия: ");
-            string a = Console.ReadLine() ?? "";
-            return new LessonType(a);
+            string Name = Console.ReadLine() ?? "";
+            return new LessonType(Name);
         }
         public static Division Division()
         {
