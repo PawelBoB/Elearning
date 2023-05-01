@@ -6,10 +6,10 @@ namespace Elearning
 {
     public class LessonType
     {
-        private readonly string name;
+        public string Name { get; }
         public LessonType(string name)
         {
-            this.name = name;
+            Name= name;
         }
     }
 }
