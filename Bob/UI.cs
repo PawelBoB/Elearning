@@ -83,6 +83,23 @@ namespace Bob
             throw new NotImplementedException();
         }
         
+        public static void Print(Discipline discipline)
+        {
+            throw new NotImplementedException();
+        }
+        public static void Print(Building building)
+        {
+            Console.WriteLine(building.Name);
+            Console.WriteLine(building.Address);
+            Print(building.Employee);
+            Print(building.Organization);
+        }
+
+        public static void Print(Organization organization)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void Print(Auditory auditory)
         {
             Console.WriteLine(auditory.Name);
@@ -100,22 +117,7 @@ namespace Bob
             throw new NotImplementedException();
         }
 
-        private static void Print(Discipline discipline)
-        {
-            throw new NotImplementedException();
-<<<<<<< HEAD
-        }
-    }
-}
-=======
-        }
+       
 
-        public static void Print(Equipment equipment)
-        {
-            Console.WriteLine(equipment.Name);
-            Console.WriteLine(equipment.Price);
-            Console.WriteLine(equipment.RegistrationDate);
-        }
     }
 }
->>>>>>> a621e3961b03eb72ce31d748acae73638ef82554
