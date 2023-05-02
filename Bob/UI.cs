@@ -67,6 +67,12 @@ namespace Bob
             Print(lesson.Pair);
             Print(lesson.LessonType);
         }
+        
+        public static void Print(Paragraph paragraph)
+        {
+            Console.WriteLine(paragraph.Name);
+            Print(paragraph.Theme);
+        }
 
         public static void Print(Pair pair)
         {
