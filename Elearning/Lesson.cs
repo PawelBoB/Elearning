@@ -13,9 +13,9 @@ namespace Elearning
         public Pair Pair { get; }
         public LessonType LessonType { get; }
 
-        public Lesson(DateOnly date, Discipline discipline, Employee employee, Group group, Pair pair, LessonType lessonType)
+        public Lesson(DateOnly? date, Discipline discipline, Employee employee, Group group, Pair pair, LessonType lessonType)
         {
-            Date = date;
+            Date = date ?? DateOnly.FromDateTime(DateTime.Now);
             Discipline = discipline;
             Employee = employee;
             Group = group;
