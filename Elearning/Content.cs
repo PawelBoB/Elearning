@@ -6,16 +6,13 @@ namespace Elearning
 {
     public class Content
     {
-        private readonly string name;
-        private readonly string author;
-
-        public string Name { get => name; }
-        public string Author { get => author; }
+        public string Name { get ; }
+        public string Author { get ; }
 
         public Content(string name, string author)
         {
-            this.name = name;
-            this.author = author;
+            Name = name;
+            Author = author;
         }
     }
 }
