@@ -53,18 +53,18 @@ namespace Bob
         public static Group Group()
         {
             Console.Write("Название группы: ");
-            string a = Console.ReadLine() ?? "";
+            string name = Console.ReadLine() ?? "";
 
             Console.Write("Сокращение группы: ");
-            string b = Console.ReadLine() ?? "";
+            string shortName = Console.ReadLine() ?? "";
 
             Console.Write("Численность: ");
-            int с = Int32.Parse(Console.ReadLine() ?? "0");
+            UInt16 size = UInt16.Parse(Console.ReadLine() ?? "0");
 
-            Console.Write("Код поступления: ");
-            int d = Int32.Parse(Console.ReadLine() ?? "0");
+            Console.Write("Год поступления: ");
+            UInt16 yearAdmission = UInt16.Parse(Console.ReadLine() ?? "0");
 
-            return new Group(a, b, с, d, Specialization(), Employee());
+            return new Group(name, shortName, size, yearAdmission, Specialization(), Employee());
         }
         public static Building Building()
         {
