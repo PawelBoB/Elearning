@@ -103,8 +103,8 @@ namespace Bob
 
         public static void Print(Content content)
         { 
-            Console.WritLine(content.Name);
-            Console.WritLine(content.Author);
+            Console.WriteLine(content.Name);
+            Console.WriteLine(content.Author);
         }
     }
 }
