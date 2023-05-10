@@ -191,7 +191,7 @@ namespace Bob
             string name = Console.ReadLine() ?? "";
 
             Console.Write("Введите сумму: ");
-            _ = int.TryParse(Console.ReadLine(), out int price);
+            _ = ushort.TryParse(Console.ReadLine(), out ushort price);
 
             DateOnly dateOnly;
             while (!DateOnly.TryParse(Console.ReadLine(), out dateOnly))
