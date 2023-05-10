@@ -44,7 +44,7 @@ namespace Bob
             Console.WriteLine(group.Size);
             Console.WriteLine(group.ShortName);
             Console.WriteLine(group.YearAdmission);
-            Print(group.Employee);
+            Print(group.Headmaster);
             Print(group.Specialization);
         }
 

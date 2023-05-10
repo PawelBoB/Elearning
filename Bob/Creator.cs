@@ -59,7 +59,7 @@ namespace Bob
             string shortName = Console.ReadLine() ?? "";
 
             Console.Write("Численность: ");
-            UInt16 size = UInt16.Parse(Console.ReadLine() ?? "0");
+            byte size = byte.Parse(Console.ReadLine() ?? "0");
 
             Console.Write("Год поступления: ");
             UInt16 yearAdmission = UInt16.Parse(Console.ReadLine() ?? "0");
