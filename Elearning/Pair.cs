@@ -1,4 +1,4 @@
-//https://docs.google.com/document/d/1r4OjKXg5_5yj6ibHB778UEF5Z1nbUqGdXjpQXbTGWiQ/edit?usp=sharing
+//https://docs.google.com/document/d/1r4OjKXg5_5yj6ibHB778UEF5Z1nbUqGdXjpQXbTGWiQ/edit?usp=sharing 
 using Microsoft.VisualBasic;
 using System;
 using System.Runtime.Intrinsics.X86;
@@ -14,7 +14,6 @@ namespace Elearning
         public TimeSpan BeginningsBreak { get; }
         public TimeSpan EndingBreak { get; }
         public Shift Shift { get; }
-       
         public Pair() : this(new TimeSpan(), new TimeSpan(), new TimeSpan()) { }
         public Pair(TimeSpan eginningsP, TimeSpan endingP, TimeSpan beginningsBreak) : this(eginningsP, endingP, beginningsBreak, new TimeSpan(), new Shift("")) { }
         public Pair(TimeSpan beginningsP, TimeSpan endingP, TimeSpan beginningsBreak, TimeSpan endingBreak, Shift shift)
