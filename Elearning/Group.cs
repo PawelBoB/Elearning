@@ -8,19 +8,19 @@ namespace Elearning
     {
         public string Name { get; }
         public string ShortName { get; }
-        public UInt16 Size { get; }
+        public byte Size { get; }
         public UInt16 YearAdmission { get;  }
         public Specialization Specialization { get; }
-        public Employee Employee { get; } 
+        public Employee Headmaster { get; } 
 
-        public Group(string name, string shortName, UInt16 size, UInt16 yearAdmission, Specialization special, Employee employee)
+        public Group(string name, string shortName, byte size, UInt16 yearAdmission, Specialization special, Employee headmaster)
         {
             Name = name;
             ShortName = shortName;
             Size = size;
             YearAdmission = yearAdmission;
             Specialization = special;
-            Employee = employee;
+            Headmaster = headmaster;
         }
     }
 }
