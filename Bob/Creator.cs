@@ -23,12 +23,13 @@ namespace Bob
 
         public static TimeSpan GetTimeSpan()
         {
-            Console.Write("Введите час: ");
-            _ = int.TryParse(Console.ReadLine() ?? "0", out int h);
-            Console.Write("Введите минуту: ");
-            _ = int.TryParse(Console.ReadLine() ?? "0", out int m);
-            Console.Write("Введите секунду: ");
-            _ = int.TryParse(Console.ReadLine() ?? "0", out int s);
+            int h, m, s;
+            while (!int.TryParse(Console.ReadLine(), out h))
+                Console.Write("Введите час: ");
+            while (!int.TryParse(Console.ReadLine(), out m))
+                Console.Write("Введите минуту: ");
+            while (!int.TryParse(Console.ReadLine() ?? "0", out s))
+                Console.Write("Введите секунду: ");
 
             return new TimeSpan(h, m, s);
         }
