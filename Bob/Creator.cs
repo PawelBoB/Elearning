@@ -6,10 +6,24 @@ namespace Bob
     {
         public static Lesson Lesson()
         {
-            DateOnly dateOnly;
-            while (!DateOnly.TryParse(Console.ReadLine(), out dateOnly))
-                Console.WriteLine("Введите дату в формате дд.мм.гггг");
-            return new Lesson(dateOnly, Discipline(), Employee(), Group(), Pair(), LessonType());
+            Lesson lesson;
+            Console.WriteLine("Введите дату в формате дд.мм.гггг (Если дата не задаётся, введите 0)");
+            while (true)
+            {
+                string input = Console.ReadLine() ?? "";
+                if (DateOnly.TryParse(input, out DateOnly dateOnly)) 
+                { 
+                    lesson = new Lesson(dateOnly, Discipline(), Employee(), Group(), Pair(), LessonType());
+                    break;
+                }
+                else if (input == "0") 
+                { 
+                    lesson = new Lesson(Discipline(), Employee(), Group(), Pair(), LessonType());
+                    break;
+                }
+                else Console.WriteLine("Некорректно введена дата!");
+            }
+            return lesson;
         }
         public static Pair Pair()
         {
