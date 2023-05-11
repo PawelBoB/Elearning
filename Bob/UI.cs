@@ -122,7 +122,7 @@ namespace Bob
         public static void Print(KTP ktp)
         {
             Print(ktp.Paragraph);
-            Print(ktp.Lessontype);
+            Print(ktp.LessonType);
             foreach (Content content in ktp.Content)
                 Print(content);
             Console.WriteLine(ktp.Number);
