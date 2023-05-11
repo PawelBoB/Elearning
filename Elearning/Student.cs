@@ -43,7 +43,7 @@ namespace Elearning
         {
             Console.WriteLine($"{LasrName} {Name} {MiddleName}, здравствуйте.");
         }
-        readonly struct StudentStruct
+        struct StudentStruct
         {
             public string LastName { get; set; }
             public string Name { get; set; }
