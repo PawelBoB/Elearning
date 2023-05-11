@@ -7,15 +7,15 @@ namespace Elearning
     public class KTP
     {
         public Paragraph Paragraph { get; }
-        public LessonType Lessontype { get; }
+        public LessonType LessonType { get; }
         public List<Content> Content { get; }
-        public int Number { get; }
-        public int Hour { get; }
+        public uint Number { get; }
+        public uint Hour { get; }
 
-        public KTP(Paragraph paragraph, LessonType lessontype, List<Content> content, int number, int hour)
+        public KTP(Paragraph paragraph, LessonType lessonType, List<Content> content, uint number, uint hour)
         {
             Paragraph = paragraph;
-            Lessontype = lessontype;
+            Lessontype = lessonType;
             Content = content;
             Number = number;
             Hour = hour;
