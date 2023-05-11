@@ -6,11 +6,11 @@ namespace Elearning
 {
     public class Student
     {
-        public string LastName { get; }
-        public string Name { get; }
-        public string MiddleName { get; }
-        public Group Group { get; }
-        public DateOnly Birthday { get; }
+        public string LastName { get; set; }
+        public string Name { get; set; }
+        public string MiddleName { get; set; }
+        public Group Group { get; set; }
+        public DateOnly Birthday { get; set; }
         public Student() : this("Noname", "Noname", "Noname")
         { }
         public Student(string lastName, string name, string middleName) : this(lastName, name, middleName, new Group(), new DateOnly(0, 0, 0))
@@ -45,11 +45,11 @@ namespace Elearning
         }
         readonly struct StudentStruct
         {
-            public string LastName { get; }
-            public string Name { get; }
-            public string MiddleName { get; }
-            public Group Group { get; }
-            public DateOnly Birthday { get; }
+            public string LastName { get; set; }
+            public string Name { get; set; }
+            public string MiddleName { get; set; }
+            public Group Group { get; set; }
+            public DateOnly Birthday { get; set; }
             public StudentStruct(Student student)
             {
                 LastName = student.LastName;
