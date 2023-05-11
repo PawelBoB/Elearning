@@ -139,7 +139,7 @@ namespace Bob
             string a = Console.ReadLine() ?? "";
 
             Console.Write("Введите оклад: ");
-            int b = Int32.Parse(Console.ReadLine() ?? "0");
+            decimal b = decimal.Parse(Console.ReadLine() ?? "0");
 
             return new Post(a, b, Division());
 

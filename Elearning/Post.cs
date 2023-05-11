@@ -7,10 +7,10 @@ namespace Elearning
     public class Post
     { 
         public string Name { get; }
-        public float Salary { get; }
+        public decimal Salary { get; }
         public Division Division { get; }
 
-        public Post(string name, float salary, Division division)
+        public Post(string name, decimal salary, Division division)
         {
             Name = name;
             Salary = salary;
