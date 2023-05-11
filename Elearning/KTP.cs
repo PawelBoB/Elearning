@@ -11,13 +11,13 @@ namespace Elearning
         public int Number { get; }
         public int Hour { get; }
 
-        public KTP(Paragraph paragraph, LessonType lessontype, List<Content> content, int nomer, int chas)
+        public KTP(Paragraph paragraph, LessonType lessontype, List<Content> content, int number, int hour)
         {
             Paragraph = paragraph;
             Lessontype = lessontype;
             Content = content;
-            Number = nomer;
-            Hour = chas;
+            Number = number;
+            Hour = hour;
         }
     }
 }
