@@ -11,13 +11,13 @@ namespace Bob
             while (true)
             {
                 string input = Console.ReadLine() ?? "";
-                if (DateOnly.TryParse(input, out DateOnly dateOnly)) 
-                { 
+                if (DateOnly.TryParse(input, out DateOnly dateOnly))
+                {
                     lesson = new Lesson(dateOnly, Discipline(), Employee(), Group(), Pair(), LessonType());
                     break;
                 }
-                else if (input == "0") 
-                { 
+                else if (input == "0")
+                {
                     lesson = new Lesson(Discipline(), Employee(), Group(), Pair(), LessonType());
                     break;
                 }
@@ -42,7 +42,6 @@ namespace Bob
 
             return new TimeSpan(h, m, s);
         }
-        }
         public static Shift Shift()
         {
             Console.Write("Название смены: ");
@@ -61,7 +60,7 @@ namespace Bob
             string middleName = Console.ReadLine() ?? "";
 
             DateOnly dateOnly;
-            while(!DateOnly.TryParse(Console.ReadLine(), out dateOnly))
+            while (!DateOnly.TryParse(Console.ReadLine(), out dateOnly))
                 Console.WriteLine("Введите дату в формате дд.мм.гггг");
 
             return new Student(lastName, name, middleName, Group(), dateOnly);

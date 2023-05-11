@@ -10,14 +10,14 @@ namespace Elearning
         public string Name { get; }
         public string LegalAddress { get; }
         public string ActualAddress { get; }
-        public Employee Employee { get; }
+        public Employee Supervisor { get; }
 
-        public Organization(string name, string legalAddress, string actualAddress, Employee employee)
+        public Organization(string name, string legalAddress, string actualAddress, Employee supervisor)
         {
             Name = name;
             LegalAddress = legalAddress;
             ActualAddress = actualAddress;
-            Employee = employee;
+            Supervisor = supervisor;
         }
     }
 }
