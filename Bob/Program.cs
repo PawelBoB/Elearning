@@ -51,7 +51,7 @@ namespace Bob
                         Creator.Organization();
                         break;
                     case "Content":
-                        Creator.Content();
+                        UI.Print(Creator.Content());
                         break;
                     case "Shift":
                         Creator.Shift();
