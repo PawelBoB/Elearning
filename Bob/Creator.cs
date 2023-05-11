@@ -235,9 +235,9 @@ namespace Bob
                 contents.Add(Content());
             }
             Console.Write("Введите номер занятия: ");
-            _ = int.TryParse(Console.ReadLine(), out int number);
+            _ = uint.TryParse(Console.ReadLine(), out uint number);
             Console.Write("Введите количество часов: ");
-            _ = int.TryParse(Console.ReadLine(), out int hour);
+            _ = uint.TryParse(Console.ReadLine(), out uint hour);
 
             return new KTP(Paragraph(), LessonType(), contents, number, hour);
         }
