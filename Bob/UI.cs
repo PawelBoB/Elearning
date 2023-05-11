@@ -76,9 +76,13 @@ namespace Bob
 
         public static void Print(Pair pair)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(pair.BeginningsP);
+            Console.WriteLine(pair.BeginningsBreak);
+            Console.WriteLine(pair.EndingP);
+            Console.WriteLine(pair.EndingBreak);
+            Print(pair.Shift);
         }
-
+        
         public static void Print(Employee employee)
         {
             throw new NotImplementedException();
