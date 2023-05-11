@@ -5,10 +5,10 @@ namespace Elearning
     public class Equipment
     {
         public string Name { get; }
-        public int Price { get; }
+        public UInt16 Price { get; }
         public DateOnly RegistrationDate { get; }
 
-        public Equipment(string name, int price, DateOnly? registrationDate = null)
+        public Equipment(string name, UInt16 price, DateOnly? registrationDate = null)
         {
             Name = name;
             Price = price;

@@ -1,26 +1,29 @@
 ﻿using Elearning;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bob
 {
     internal class UI
     {
+        public static void Print(Post post)
+        {
+            Console.WriteLine(post.Name);
+            Console.WriteLine(post.Salary);
+            Print(post.Division);
+        }
+
+        public static void Print(Division division)
+        {
+            throw new NotImplementedException();
+        }
+
         public static void Print(Student student)
+
         {
             Console.WriteLine(student.MiddleName);
             Console.WriteLine(student.LastName);
             Console.WriteLine(student.Name);
             Console.WriteLine(student.Birthday);
             Print(student.Group);
-        }
-
-        private static void Print(Group group)
-        {
-            throw new NotImplementedException();
         }
 
         public static void Print(Theme_LessonType themeLessonType)
@@ -30,14 +33,29 @@ namespace Bob
             Console.WriteLine(themeLessonType.Hours);
         }
 
-        private static void Print(Theme theme)
+        public static void Print(Theme theme)
         {
             throw new NotImplementedException();
         }
 
-        public static void Print(LessonType group)
+        public static void Print(Group group)
+        {
+            Console.WriteLine(group.Name);
+            Console.WriteLine(group.Size);
+            Console.WriteLine(group.ShortName);
+            Console.WriteLine(group.YearAdmission);
+            Print(group.Headmaster);
+            Print(group.Specialization);
+        }
+
+        public static void Print(Specialization specialization)
         {
             throw new NotImplementedException();
+        }
+
+        public static void Print(LessonType lessonType)
+        {
+            Console.WriteLine(lessonType.Name);
         }
 
         public static void Print(Lesson lesson)
@@ -49,27 +67,49 @@ namespace Bob
             Print(lesson.Pair);
             Print(lesson.LessonType);
         }
+        
+        public static void Print(Paragraph paragraph)
+        {
+            Console.WriteLine(paragraph.Name);
+            Print(paragraph.Theme);
+        }
 
-        private static void Print(Pair pair)
+        public static void Print(Pair pair)
+        {
+            Console.WriteLine(pair.BeginningsP);
+            Console.WriteLine(pair.BeginningsBreak);
+            Console.WriteLine(pair.EndingP);
+            Console.WriteLine(pair.EndingBreak);
+            Print(pair.Shift);
+        }
+        
+        public static void Print(Employee employee)
         {
             throw new NotImplementedException();
         }
 
-        private static void Print(Employee employee)
+        public static void Print(Discipline discipline)
+        {
+            throw new NotImplementedException();
+        }
+        public static void Print(Building building)
+        {
+            Console.WriteLine(building.Name);
+            Console.WriteLine(building.Address);
+            Print(building.Employee);
+            Print(building.Organization);
+        }
+
+        public static void Print(Organization organization)
         {
             throw new NotImplementedException();
         }
 
-        private static void Print(Discipline discipline)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static void Print(Equipment equipment)
-        {
-            Console.WriteLine(equipment.Name);
-            Console.WriteLine(equipment.Price);
-            Console.WriteLine(equipment.RegistrationDate);
+        public static void Print(Content content)
+        { 
+            Console.WriteLine(content.Name);
+            Console.WriteLine(content.Author);
         }
     }
 }
+
