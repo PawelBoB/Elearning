@@ -48,16 +48,16 @@ namespace Bob
                         Creator.Division();
                         break;
                     case "Organization":
-                        Creator.Organization();
+                        UI.Print(Creator.Organization());
                         break;
                     case "Content":
-                        Creator.Content();
+                        UI.Print(Creator.Content());
                         break;
                     case "Shift":
-                        Creator.Shift();
+                        UI.Print(Creator.Shift());
                         break;
                     case "Paragraph":
-                        Creator.Paragraph();
+                        UI.Print(Creator.Paragraph());
                         break;
                     case "Equipment":
                         Creator.Equipment();

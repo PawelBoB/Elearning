@@ -5,14 +5,14 @@ namespace Elearning
     {
         public string Name { get; }
         public string Address { get; }
-        public Employee Employee { get; }
+        public Employee  Commendant { get; }
         public Organization Organization { get; }
 
-        public Building(string name, string address, Employee employee, Organization organization)
+        public Building(string name, string address, Employee commendant, Organization organization)
         {
             Name = name;
             Address = address;
-            Employee = employee;
+            Commendant = commendant;
             Organization = organization;
         }
     }

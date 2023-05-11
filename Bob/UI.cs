@@ -82,7 +82,12 @@ namespace Bob
             Console.WriteLine(pair.EndingBreak);
             Print(pair.Shift);
         }
-        
+
+        public static void Print(Shift shift)
+        {
+            Console.WriteLine(shift.Name);
+        }
+
         public static void Print(Employee employee)
         {
             throw new NotImplementedException();
@@ -96,13 +101,16 @@ namespace Bob
         {
             Console.WriteLine(building.Name);
             Console.WriteLine(building.Address);
-            Print(building.Employee);
+            Print(building.Commendant);
             Print(building.Organization);
         }
 
         public static void Print(Organization organization)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(organization.Name);
+            Console.WriteLine(organization.LegalAddress);
+            Console.WriteLine(organization.ActualAddress);
+            Print(organization.Supervisor);
         }
 
         public static void Print(Content content)
