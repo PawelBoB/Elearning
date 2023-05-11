@@ -57,7 +57,7 @@ namespace Bob
                         Creator.Shift();
                         break;
                     case "Paragraph":
-                        Creator.Paragraph();
+                        UI.Print(Creator.Paragraph());
                         break;
                     case "Equipment":
                         Creator.Equipment();
