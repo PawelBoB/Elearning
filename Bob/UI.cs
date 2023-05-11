@@ -118,12 +118,24 @@ namespace Bob
             Console.WriteLine(content.Name);
             Console.WriteLine(content.Author);
         }
+<<<<<<< HEAD
 
         public static void Print(Equipment equipment)
         {
             Console.WriteLine(equipment.Name);
             Console.WriteLine(equipment.Price);
             Console.WriteLine(equipment.SheetDate);
+=======
+        
+        public static void Print(KTP ktp)
+        {
+            Print(ktp.Paragraph);
+            Print(ktp.Lessontype);
+            foreach (Content content in ktp.Content)
+                Print(content);
+            Console.WriteLine(ktp.Number);
+            Console.WriteLine(ktp.Hour);
+>>>>>>> d8e453b67c5ba33e88c75ef43f2d5a11e801e539
         }
     }
 }

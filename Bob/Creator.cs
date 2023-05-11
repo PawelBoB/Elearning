@@ -226,5 +226,20 @@ namespace Bob
 
             return new DateTime(year, month, day);
         }
+        
+        public static KTP KTP()
+        {
+            List<Content> contents = new();
+            for (int i = 0; i < 3; i++)
+            {
+                contents.Add(Content());
+            }
+            Console.Write("Введите номер занятия: ");
+            _ = int.TryParse(Console.ReadLine(), out int number);
+            Console.Write("Введите количество часов: ");
+            _ = int.TryParse(Console.ReadLine(), out int hour);
+
+            return new KTP(Paragraph(), LessonType(), contents, number, hour);
+        }
     }
 }
