@@ -65,6 +65,9 @@ namespace Bob
                     case "Building":
                         UI.Print(Creator.Building());
                         break;
+                    case "KTP":
+                        UI.Print(Creator.KTP());
+                        break;
                     default:
                         Console.WriteLine("Такого класса не существует");
                         break;
