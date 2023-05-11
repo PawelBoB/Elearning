@@ -60,7 +60,7 @@ namespace Bob
                         UI.Print(Creator.Paragraph());
                         break;
                     case "Equipment":
-                        Creator.Equipment();
+                        UI.Print(Creator.Equipment());
                         break;
                     case "Building":
                         UI.Print(Creator.Building());
