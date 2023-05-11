@@ -206,7 +206,7 @@ namespace Bob
             string name = Console.ReadLine() ?? "";
 
             Console.Write("Введите сумму: ");
-            _ = ushort.TryParse(Console.ReadLine(), out ushort price);
+            _ = decimal.TryParse(Console.ReadLine(), out decimal price);
 
             DateOnly dateOnly;
             while (!DateOnly.TryParse(Console.ReadLine(), out dateOnly))

@@ -5,14 +5,16 @@ namespace Elearning
     public class Equipment
     {
         public string Name { get; }
-        public UInt16 Price { get; }
-        public DateOnly RegistrationDate { get; }
+        public decimal Price { get; }
+        public DateOnly SheetDate { get; }
 
-        public Equipment(string name, UInt16 price, DateOnly? registrationDate = null)
+        public Equipment(string name, decimal price, DateOnly sheetDate)
         {
             Name = name;
             Price = price;
-            RegistrationDate = registrationDate ?? DateOnly.FromDateTime(DateTime.Now);
+            SheetDate = sheetDate;
         }
+
+        public Equipment(string name, decimal price) : this(name, price, DateOnly.FromDateTime(DateTime.Now)) { }
     }
 }
