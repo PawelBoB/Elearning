@@ -151,6 +151,7 @@ namespace Bob
                 Console.WriteLine("Введите количество часов: ");
             return new Theme_LessonType(Theme(), LessonType(), hours);
         }
+
         public static Theme Theme()
         {
             Console.Write("Название темы: ");
