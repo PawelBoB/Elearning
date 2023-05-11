@@ -9,10 +9,10 @@ namespace Elearning
         public Paragraph Paragraph { get; }
         public LessonType LessonType { get; }
         public List<Content> Content { get; }
-        public uint Number { get; }
-        public uint Hour { get; }
+        public byte Number { get; }
+        public byte Hour { get; }
 
-        public KTP(Paragraph paragraph, LessonType lessonType, List<Content> content, uint number, uint hour)
+        public KTP(Paragraph paragraph, LessonType lessonType, List<Content> content, byte number, byte hour)
         {
             Paragraph = paragraph;
             LessonType = lessonType;
