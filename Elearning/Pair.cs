@@ -9,34 +9,29 @@ namespace Elearning
 {
     public class Pair       // Pair num = new Pair(new TimeSpan (12,23,04)); - ввод времени
     {
-        private readonly TimeSpan beginningsP;
-        private readonly TimeSpan endingP;
-        private readonly TimeSpan beginningsBreak;
-        private readonly TimeSpan endingBreak;
-        private readonly  Shift shift;
-
-        public Pair()
-        {
-            beginningsP = new TimeSpan(00, 00, 00);
-            endingP = new TimeSpan(00, 00, 00);
-            beginningsBreak = new TimeSpan(00, 00, 00);
-            endingBreak = new TimeSpan(00, 00, 00);
-            shift = new ("нет данных");
-        }
+        public TimeSpan BeginningsP { get; }
+        public TimeSpan EndingP { get; }
+        public TimeSpan BeginningsBreak { get; }
+        public TimeSpan EndingBreak { get; }
+        public Shift Shift { get; }
         
-        public TimeSpan BeginningsP { get => beginningsP; }
-        public TimeSpan EndingP { get => endingP; }
-        public TimeSpan BeginningsBreak { get => beginningsBreak; }
-        public TimeSpan EndingBreak { get => endingBreak; }
-        public Shift Shift_ { get =>  shift; }
+        public Pair() : this(new TimeSpan(), new TimeSpan(), new TimeSpan()) { }
+        public Pair(TimeSpan eginningsP, TimeSpan endingP, TimeSpan beginningsBreak) : this(eginningsP, endingP, beginningsBreak, new TimeSpan(), new Shift("")) { }
         public Pair(TimeSpan beginningsP, TimeSpan endingP, TimeSpan beginningsBreak, TimeSpan endingBreak, Shift shift)
         {
-            this.beginningsP = beginningsP;
-            this.endingP = endingP;
-            this.beginningsBreak = beginningsBreak;
-            this.endingBreak = endingBreak;
-            this.shift = shift;
+            BeginningsP = beginningsP;
+            EndingP = endingP;
+            BeginningsBreak = beginningsBreak;
+            EndingBreak = endingBreak;
+            Shift = shift;
         }
-        
+        public void Deconstract(out TimeSpan beginningsP, out TimeSpan endingP, out TimeSpan beginningsBreak, out TimeSpan endingBreak, out Shift shift)
+        {
+            beginningsP = BeginningsP;
+            endingP = EndingP;
+            beginningsBreak = BeginningsBreak;
+            endingBreak = EndingBreak;
+            shift = Shift;
+        }
     }
 }

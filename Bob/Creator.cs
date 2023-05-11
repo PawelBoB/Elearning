@@ -1,9 +1,4 @@
 ﻿using Elearning;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bob
 {
@@ -11,7 +6,24 @@ namespace Bob
     {
         public static Lesson Lesson()
         {
-            return new Lesson(Discipline(), Employee(), Group(), Pair(), LessonType());
+            Lesson lesson;
+            Console.WriteLine("Введите дату в формате дд.мм.гггг (Если дата не задаётся, введите 0)");
+            while (true)
+            {
+                string input = Console.ReadLine() ?? "";
+                if (DateOnly.TryParse(input, out DateOnly dateOnly)) 
+                { 
+                    lesson = new Lesson(dateOnly, Discipline(), Employee(), Group(), Pair(), LessonType());
+                    break;
+                }
+                else if (input == "0") 
+                { 
+                    lesson = new Lesson(Discipline(), Employee(), Group(), Pair(), LessonType());
+                    break;
+                }
+                else Console.WriteLine("Некорректно введена дата!");
+            }
+            return lesson;
         }
         public static Pair Pair()
         {
@@ -55,18 +67,27 @@ namespace Bob
         public static Group Group()
         {
             Console.Write("Название группы: ");
-            string a = Console.ReadLine() ?? "";
+            string name = Console.ReadLine() ?? "";
 
             Console.Write("Сокращение группы: ");
-            string b = Console.ReadLine() ?? "";
+            string shortName = Console.ReadLine() ?? "";
 
             Console.Write("Численность: ");
-            int с = Int32.Parse(Console.ReadLine() ?? "0");
+            byte size = byte.Parse(Console.ReadLine() ?? "0");
 
-            Console.Write("Код поступления: ");
-            int d = Int32.Parse(Console.ReadLine() ?? "0");
+            Console.Write("Год поступления: ");
+            UInt16 yearAdmission = UInt16.Parse(Console.ReadLine() ?? "0");
 
-            return new Group(a, b, с, d, Specialization(), Employee());
+            return new Group(name, shortName, size, yearAdmission, Specialization(), Employee());
+        }
+        public static Building Building()
+        {
+            Console.Write("Введите имя: ");
+            string name = Console.ReadLine() ?? "";
+
+            Console.Write("Введите адрес: ");
+            string address = Console.ReadLine() ?? "";
+            return new Building(name, address, Employee(), Organization());
         }
         public static Specialization Specialization()
         {
@@ -145,8 +166,8 @@ namespace Bob
         public static LessonType LessonType()
         {
             Console.Write("Введите вид занятия: ");
-            string a = Console.ReadLine() ?? "";
-            return new LessonType(a);
+            string Name = Console.ReadLine() ?? "";
+            return new LessonType(Name);
         }
         public static Division Division()
         {
@@ -184,9 +205,13 @@ namespace Bob
             string name = Console.ReadLine() ?? "";
 
             Console.Write("Введите сумму: ");
-            _ = int.TryParse(Console.ReadLine(), out int price);
+            _ = ushort.TryParse(Console.ReadLine(), out ushort price);
 
-            return new Equipment(name, price, DateTime());
+            DateOnly dateOnly;
+            while (!DateOnly.TryParse(Console.ReadLine(), out dateOnly))
+                Console.WriteLine("Введите дату в формате дд.мм.гггг");
+
+            return new Equipment(name, price, dateOnly);
         }
 
         public static DateTime DateTime()

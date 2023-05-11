@@ -6,16 +6,14 @@ namespace Elearning
 {
     public class Discipline
     {
-        private readonly string name;
-        private readonly string abbreviation;
-
-        public string Name { get { return name; } }
-        public string Abbreviation { get { return abbreviation; } }
+ 
+        public string Name { get; }
+        public string Abbreviation { get; }
 
         public Discipline(string name, string abbreviation)
         {
-            this.name = name;
-            this.abbreviation = abbreviation;
+            Name = name;
+            Abbreviation = abbreviation;
         }
     }
 }
