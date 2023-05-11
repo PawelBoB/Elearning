@@ -15,7 +15,7 @@ namespace Elearning
         public KTP(Paragraph paragraph, LessonType lessonType, List<Content> content, uint number, uint hour)
         {
             Paragraph = paragraph;
-            Lessontype = lessonType;
+            LessonType = lessonType;
             Content = content;
             Number = number;
             Hour = hour;
