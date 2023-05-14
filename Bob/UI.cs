@@ -101,7 +101,7 @@ namespace Bob
         {
             Console.WriteLine(building.Name);
             Console.WriteLine(building.Address);
-            Print(building.Commendant);
+            Print(building.Сommandant);
             Print(building.Organization);
         }
 
