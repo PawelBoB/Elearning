@@ -9,15 +9,15 @@ namespace Elearning
     {
         public struct Structure
         {
-            public Theme theme;
-            public LessonType lessonType;
-            public UInt16 hours;
+            public Theme Theme { get; set; }
+            public LessonType LessonType { get; set; }
+            public UInt16 Hours { get; set; }
 
             public Structure(Theme theme, LessonType lessonType, UInt16 hours)
             {
-                this.theme = theme;
-                this.lessonType = lessonType;
-                this.hours = hours;
+                Theme = theme;
+                LessonType = lessonType;
+                Hours = hours;
             }
         }
 
