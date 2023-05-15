@@ -24,14 +24,14 @@ namespace Elearning
         public Theme Theme { get; set; }
         public LessonType LessonType { get; set; }
         public UInt16 Hours { get; set; }
-        public Structure structure { get; set; }
+        public Structure Theme_LessonTypeStructure { get; set; }
 
         public Theme_LessonType(Theme theme, LessonType lessonType, UInt16 hours)
         {
             Theme = theme;
             LessonType = lessonType;
             Hours = hours;
-            structure = new Structure(theme, lessonType, hours);
+            Theme_LessonTypeStructure = new Structure(theme, lessonType, hours);
         }
 
         public Theme_LessonType(Theme theme, LessonType lessonType) : this(theme, lessonType, 0) { }
@@ -45,8 +45,8 @@ namespace Elearning
             hours = Hours;
         }
 
-        public void foo() { }
-        public void foo(int value) { }
-        public void foo(string value) { }
+        public static void Foo() { }
+        public static void Foo(int value) { Console.WriteLine(value); }
+        public static void Foo(string value) { Console.WriteLine(value); }
     }
 }
