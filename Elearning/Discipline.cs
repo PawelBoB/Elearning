@@ -15,5 +15,6 @@ namespace Elearning
             Name = name;
             Abbreviation = abbreviation;
         }
+        public Discipline() : this("no_name", "no_name") { }
     }
 }

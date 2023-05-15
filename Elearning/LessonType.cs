@@ -11,5 +11,6 @@ namespace Elearning
         {
             Name= name;
         }
+        public LessonType() : this("no_name"){ }
     }
 }

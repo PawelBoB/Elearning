@@ -5,10 +5,10 @@ namespace Elearning
 {
     public class Theme
     {
-        private readonly string name;
+        public string Name { get; }
         public Theme(string name)
         {
-            this.name = name;
+            this.Name = name;
         }
     }
 }
