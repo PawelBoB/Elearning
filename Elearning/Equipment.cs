@@ -25,19 +25,18 @@ namespace Elearning
 			sheetDate = SheetDate;
 		}
 
-		public void Print() {
-			Console.WriteLine($"Оборудование: \nНазвание: {this.Name}\nЦена: {this.Price}\nДата: {this.SheetDate}");
+		public void Print(int data) {
+			Console.WriteLine($"{data}");
 		}
 
-		public void PrintName()
-		{
-			Console.WriteLine($"Название: {this.Name}");
-		}
-
-        public void PrintPrice()
+        public void Print(string data)
         {
-            Console.WriteLine($"Цена: {this.Price}");
+            Console.WriteLine($"{data}");
         }
 
+        public void Print(bool data)
+        {
+            Console.WriteLine($"{data}");
+        }
     }
 }
